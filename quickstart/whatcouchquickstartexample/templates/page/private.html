@@ -1,0 +1,11 @@
+<%inherit file="/base.html" />
+
+<%def name="title()">Private Page</%def>
+
+<%def name="body()">
+	<h1>Private Page!</h1>
+	<p>You're viewing a page protected by "What Couch?"</p>
+	<a href="${h.url(controller='page', action='public')}">Public</a> -
+	<a href="${h.url('/auth/logout')}">Logout</a>
+</%def>
+

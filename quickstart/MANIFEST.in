@@ -1,0 +1,3 @@
+include whatcouchquickstartexample/config/deployment.ini_tmpl
+recursive-include whatcouchquickstartexample/public *
+recursive-include whatcouchquickstartexample/templates *

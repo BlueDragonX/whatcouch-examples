@@ -1,0 +1,19 @@
+<%inherit file="/base.html" />
+
+<%def name="title()">Please Log In</%def>
+
+<%def name="body()">
+	<h1>Please Log In</h1>
+	<form action="${h.url('/auth/login', came_from=c.came_from)}" method="post">
+		<dl>
+			<dt><label for="login">Username</label></dt>
+			<dd><input type="text" name="login" /></dd>
+			<dt><label for="password">Password</label></dt>
+			<dd><input type="password" name="password" /></dd>
+		</dl>
+		<input type="hidden" name="came_from" value="${c.came_from}" />
+		<input type="submit" value="Login" /><br/>
+		<span style="color: red;">${c.error}</span>
+	</form>
+</%def>
+

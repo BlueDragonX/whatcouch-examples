@@ -1,0 +1,11 @@
+<%inherit file="/base.html" />
+
+<%def name="title()">Goodbye!</%def>
+
+<%def name="body()">
+	<h1>You Have Been Logged Out.  Goodbye!</h1>
+	<a href="${h.url(controller='page', action='index')}">Go Home</a> -
+	<a href="${h.url(controller='auth', action='login')}">Log In Again</a> -
+	<a href="${h.url(str(c.came_from))}">Return From Whence You Came</a>
+</%def>
+
