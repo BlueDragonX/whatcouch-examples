@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='whatcouch-quickstart-example',
-    version='1.0dev1',
+    version='1.0dev2',
     description='',
     author='',
     author_email='',
