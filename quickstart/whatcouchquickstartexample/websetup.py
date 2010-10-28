@@ -5,7 +5,7 @@ import pylons.test
 
 from whatcouchquickstartexample.config.environment import load_environment
 from whatcouchquickstartexample.model import Session
-from whatcouch.model import Database, User, Group, Permission
+from whatcouch.model import User, Group, Permission
 from couchdbkit.loaders import FileSystemDocsLoader
 
 log = logging.getLogger(__name__)
@@ -26,11 +26,11 @@ def setup_app(command, conf, vars):
     group_name = 'administrators'
     perm_name = 'superpowers'
 
-    if User.find_by_username(user_name) is not None:
+    if len(User.view('whatcouch/user_list', key=user_name)) > 0:
         raise Exception('User already exists.')
-    if Group.find_by_name(group_name) is not None:
+    if len(Group.view('whatcouch/group_list', key=group_name)) > 0:
         raise Exception('Group already exists.')
-    if Permission.find_by_name(perm_name) is not None:
+    if len(Permission.view('whatcouch/permission_list', key=perm_name)) > 0:
         raise Exception('Permission already exists.')
 
     perm = Permission(name=perm_name)
