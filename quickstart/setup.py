@@ -12,6 +12,7 @@ setup(
     author='',
     author_email='',
     url='',
+    license='BSD-derived (http://code.google.com/p/whatcouch/wiki/License)',
     install_requires=[
         "Pylons>=1.0",
     ],
