@@ -3,7 +3,7 @@ import logging
 from pylons import request, response, session, tmpl_context as c, url
 from pylons.controllers.util import abort, redirect
 
-from whatcouchquickstartexample.lib.base import BaseController, render
+from whatcouch_pylons.lib.base import BaseController, render
 from repoze.what.plugins.pylonshq import ActionProtector as authorize
 from repoze.what.predicates import not_anonymous
 

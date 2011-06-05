@@ -5,10 +5,10 @@ from mako.lookup import TemplateLookup
 from pylons.configuration import PylonsConfig
 from pylons.error import handle_mako_error
 
-import whatcouchquickstartexample.lib.app_globals as app_globals
-import whatcouchquickstartexample.lib.helpers
-from whatcouchquickstartexample.config.routing import make_map
-from whatcouchquickstartexample.model import init_model
+import whatcouch_pylons.lib.app_globals as app_globals
+import whatcouch_pylons.lib.helpers
+from whatcouch_pylons.config.routing import make_map
+from whatcouch_pylons.model import init_model
 
 def load_environment(global_conf, app_conf):
     """Configure the Pylons environment via the ``pylons.config``
@@ -24,11 +24,11 @@ def load_environment(global_conf, app_conf):
                  templates=[os.path.join(root, 'templates')])
 
     # Initialize config with the basic options
-    config.init_app(global_conf, app_conf, package='whatcouchquickstartexample', paths=paths)
+    config.init_app(global_conf, app_conf, package='whatcouch_pylons', paths=paths)
 
     config['routes.map'] = make_map(config)
     config['pylons.app_globals'] = app_globals.Globals(config)
-    config['pylons.h'] = whatcouchquickstartexample.lib.helpers
+    config['pylons.h'] = whatcouch_pylons.lib.helpers
     
     # Setup cache object as early as possible
     import pylons

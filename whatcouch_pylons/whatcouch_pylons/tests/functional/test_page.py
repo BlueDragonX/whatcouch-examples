@@ -1,4 +1,4 @@
-from whatcouchquickstartexample.tests import *
+from whatcouch_pylons.tests import *
 
 class TestPageController(TestController):
 

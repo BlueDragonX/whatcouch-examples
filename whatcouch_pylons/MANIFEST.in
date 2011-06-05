@@ -1,0 +1,3 @@
+include whatcouch_pylons/config/deployment.ini_tmpl
+recursive-include whatcouch_pylons/public *
+recursive-include whatcouch_pylons/templates *

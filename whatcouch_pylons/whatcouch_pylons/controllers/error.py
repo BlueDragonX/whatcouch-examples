@@ -4,7 +4,7 @@ from paste.urlparser import PkgResourcesParser
 from pylons.middleware import error_document_template
 from webhelpers.html.builder import literal
 
-from whatcouchquickstartexample.lib.base import BaseController
+from whatcouch_pylons.lib.base import BaseController
 
 class ErrorController(BaseController):
     """Generates error documents as and when they are required.

@@ -8,8 +8,8 @@ from pylons.middleware import ErrorHandler, StatusCodeRedirect
 from pylons.wsgiapp import PylonsApp
 from routes.middleware import RoutesMiddleware
 
-from whatcouchquickstartexample.config.environment import load_environment
-from whatcouchquickstartexample.lib.auth import add_auth
+from whatcouch_pylons.config.environment import load_environment
+from whatcouch_pylons.lib.auth import add_auth
 
 def make_app(global_conf, full_stack=True, static_files=True, **app_conf):
     """Create a Pylons WSGI application and return it
