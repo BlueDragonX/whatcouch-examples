@@ -1,10 +1,7 @@
-from pyramid.security import Everyone
-from pyramid.security import Allow
 
 class Resource(dict):
     __name__ = None
     __parent__ = None
-    __acl__ = [(Allow, 'admin', 'view')]
 
     def __init__(self, contents={}):
         dict.__init__(self, contents)

@@ -5,10 +5,10 @@ from whatcouch_pyramid.model import Session, init_model
 from whatcouch.model import User, Group, Permission
 from couchdbkit.loaders import FileSystemDocsLoader
 
-def setup_app(config, settings):
+def setup_app(settings):
     # Init CouchDB model.
     print "initializing model"
-    init_model(config)
+    init_model(settings)
 
     # Add design docs to CouchDB.
     path = sys.path[0] + '/_design'
@@ -44,7 +44,7 @@ def main(argv=sys.argv):
     root = dist.location
     config = 'config:' + os.path.join(root, 'development.ini')
     settings = appconfig(config, "whatcouch_pyramid")
-    setup_app(config, settings)
+    setup_app(settings)
 
 if __name__ == '__main__':
     main()
